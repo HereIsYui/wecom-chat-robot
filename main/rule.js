@@ -1,7 +1,8 @@
-import { UserSignIn, GetGroupRanking } from "./func";
+const { UserSignIn, GetGroupRanking } = require("./func");
+const { RES_STR } = require('../config');
 
 
-export const GlobalRuleList = [{
+const GlobalRuleList = [{
 	rule: /^群签到/,
 	func: async (data, res) => {
 		let cb = await UserSignIn(data, res);
@@ -13,4 +14,14 @@ export const GlobalRuleList = [{
 		let cb = await GetGroupRanking(data, res);
 		return cb;
 	}
+}, {
+	rule: /.+/,
+	func: async (data, res) => {
+		let cb = RES_STR;
+		return cb;
+	}
 }]
+
+module.exports = {
+	GlobalRuleList
+}

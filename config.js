@@ -1,17 +1,17 @@
 // 积分名称配置
-export const POINT_NAME = "鱼皮";
+const POINT_NAME = "鱼皮";
 // 每日签到奖励配置
-export const SIGN_POINT = {
+const SIGN_POINT = {
     MAX: 20,
     MIN: 10
 }
 // 重复签到扣分配置
-export const REPEATED_SIGN = {
+const REPEATED_SIGN = {
     MAX: 10,
     MIN: 1
 }
 // 默认返回值
-export const RES_STR = {
+const RES_STR = {
     code: 0,
     message: 'success',
     data: {
@@ -22,7 +22,7 @@ export const RES_STR = {
     }
 }
 // 发消息默认结构
-export const SEND_MSG_BODY = {
+const SEND_MSG_BODY = {
     socketType: 2,
     list: [
         {
@@ -30,8 +30,16 @@ export const SEND_MSG_BODY = {
             titleList: [
                 "🐟π FishPi Offical"
             ],
-            receivedContent: "你好~",
+            receivedContent: "",
             atList: []
         }
     ]
+}
+
+module.exports = {
+    POINT_NAME,
+    SIGN_POINT,
+    REPEATED_SIGN,
+    RES_STR,
+    SEND_MSG_BODY
 }

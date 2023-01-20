@@ -1,6 +1,6 @@
-import { createPool } from 'mysql';
+var mysql = require('mysql')
 
-var pool = createPool({
+var pool = mysql.createPool({
     host: '',
     user: '',
     password: '',
@@ -21,4 +21,5 @@ var query = function (sql, callback = () => { }) {
         }
     });
 };
-export default query;
+
+module.exports = query;

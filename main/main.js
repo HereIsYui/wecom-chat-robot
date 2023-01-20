@@ -1,7 +1,7 @@
-import { GlobalRuleList } from './rule';
+const { GlobalRuleList } = require('./rule');
 
 // 判断对话是否需要回复
-export const main = async function (data, res) {
+async function main(data, res) {
     let msg = data.spoken;
     for (let r of GlobalRuleList) {
         if (r.rule.test(msg)) {
@@ -10,3 +10,7 @@ export const main = async function (data, res) {
         }
     }
 }
+
+module.exports = {
+    main
+};
