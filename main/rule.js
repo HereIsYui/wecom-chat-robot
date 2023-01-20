@@ -1,4 +1,4 @@
-
+import { UserSignIn, GetGroupRanking } from "./func";
 
 
 export const GlobalRuleList = [{

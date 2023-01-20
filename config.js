@@ -28,7 +28,7 @@ export const SEND_MSG_BODY = {
         {
             type: 203,
             titleList: [
-                "仑哥(这里改成你的微信昵称或群名)"
+                "🐟π FishPi Offical"
             ],
             receivedContent: "你好~",
             atList: []
