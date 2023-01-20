@@ -21,7 +21,7 @@ router.post('/WeComMsg', async (req, res) => {
             }
         }
     }
-    let res = await main(msgInfo);
+    let res = await main(msgInfo, res);
     res.send(resStr);
 })
 

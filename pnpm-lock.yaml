@@ -3,11 +3,13 @@ lockfileVersion: 5.4
 specifiers:
   axios: ^1.2.3
   body-parser: ^1.20.1
+  dayjs: ^1.11.7
   express: ^4.18.2
 
 dependencies:
   axios: registry.npmmirror.com/axios/1.2.3
   body-parser: registry.npmmirror.com/body-parser/1.20.1
+  dayjs: registry.npmmirror.com/dayjs/1.11.7
   express: registry.npmmirror.com/express/4.18.2
 
 packages:
@@ -120,6 +122,12 @@ packages:
     name: cookie
     version: 0.5.0
     engines: {node: '>= 0.6'}
+    dev: false
+
+  registry.npmmirror.com/dayjs/1.11.7:
+    resolution: {integrity: sha512-+Yw9U6YO5TQohxLcIkrXBeY73WP3ejHWVvx8XCk3gxvQDCTEmS48ZrSZCKciI7Bhl/uCMyxYtE9UqRILmFphkQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/dayjs/-/dayjs-1.11.7.tgz}
+    name: dayjs
+    version: 1.11.7
     dev: false
 
   registry.npmmirror.com/debug/2.6.9:

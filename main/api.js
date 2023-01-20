@@ -1,4 +1,5 @@
 import axios from "axios";
+import { SEND_MSG_BODY } from '../config'
 // WorkTool API
 const BaseURL = 'https://worktool.asrtts.cn/wework/';
 // 申请的机器人ID
@@ -14,7 +15,7 @@ const request = axios.create({
     }
 });
 
-export const BotSendMsg = function (data) {
+export const BotSendMsg = function (data = SEND_MSG_BODY) {
     return request({
         method: 'POST',
         url: "sendRawMessage?robotId=" + robotId,
