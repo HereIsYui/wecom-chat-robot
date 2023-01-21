@@ -80,14 +80,14 @@ function GetGroupRanking(data, res) {
     let user = data.receivedName;
     let cbMsg = SEND_MSG_BODY;
     try {
-        query('SELECT uname,point FROM wc_info ORDER BY point LIMIT 0,10', (err, vals) => {
+        query('SELECT uname,point FROM wc_info ORDER BY point DESC LIMIT 0,10', (err, vals) => {
             if (err) {
                 console.log('Get group ranking err:' + JSON.stringify(err))
             } else {
                 console.log(`Get group ranking success! time:${dayjs(new Date()).format('YYYY/MM/DD')}`);
-                let msg = `当前${POINT_NAME}前10榜:\n`;
+                let msg = `\n当前${POINT_NAME}前10榜:\n`;
                 for (let i = 0; i < vals.length; i++) {
-                    msg += `${i + 1}: ${vals[i].uname},拥有${POINT_NAME}:[${vals[i].point}]`
+                    msg += `${i + 1}: ${vals[i].uname},拥有${POINT_NAME}:[${vals[i].point}]\n`
                 }
                 cbMsg.list[0].receivedContent = msg;
                 cbMsg.list[0].atList = [user];
